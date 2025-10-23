@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akpanumoh Abasiakara Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(135deg, #ebedf1, #f8d3d3);
+      color: #222;
+      padding: 30px;
+    }
+
+    .container { display: flex; gap: 30px; align-items: flex-start; background-color: #011d3b;}
+
+    .container img {
+        width: 100%; height: 100%; object-fit: cover; border-radius: 10px;
+    }
+
+    .sidebar-box {
+      width: 180px; height: 200px; background: white; border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; align-items: center;
+      justify-content: center; text-align: center; font-weight: bold; font-size: 20px;
+      border: 2px solid #007bff;
+    }
+
+    .main {
+      flex: 1; background: rgb(238, 238, 240); border-radius: 12px; padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-bottom: 30px;
+    }
+
+    .logo { font-size: 22px; font-weight: bold; }
+
+    nav a {
+      margin: 0 10px; text-decoration: none; color: #333; font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #007bff; }
+    .hero {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    .hero img {
+      width: 250px; height: 250px; object-fit: cover; border-radius: 10px;
+      border: 2px solid #007bff;
+    }
+    .hero-text { max-width: 500px; margin-left: 30px; }
+    .hero-text h1 { font-size: 28px; margin-bottom: 10px; }
+    .hero-text p { margin-bottom: 10px; }
+    .hero-text button {
+      padding: 10px 20px; background-color: #007bff; color: white;
+      border: none; border-radius: 5px; cursor: pointer;
+    }
+
+    .about { text-align: center; margin-bottom: 40px; }
+    .about h2 { font-size: 24px; margin-bottom: 15px; }
+    .about .content-box {
+      width: 80%; margin: 0 auto; border: 2px solid #555;
+      padding: 20px; border-radius: 10px; background: #f9f9f9;
+    }
+
+    .works { margin-bottom: 40px; }
+    .works h2 { text-align: center; margin-bottom: 20px; }
+    .work-cards {
+      display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;
+    }
+    .work-card {
+      width: 250px; border: 2px solid #333; border-radius: 10px;
+      text-align: center; padding: 15px; background: white;
+    }
+    .work-card img {
+      width: 100%; height: 150px; border-radius: 10px; object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .reviews { text-align: center; margin-bottom: 40px; }
+    .review-cards {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+      width: 80%; margin: 0 auto;
+    }
+    .review-card {
+      border: 2px solid #444; border-radius: 10px; background: white;
+      padding: 40px 15px 15px; position: relative; text-align: center;
+    }
+    .review-card img {
+      width: 60px; height: 60px; border-radius: 50%;
+      position: absolute; top: -30px; left: 50%; transform: translateX(-50%);
+      border: 2px solid #007bff; background: white; object-fit: cover;
+    }
+    .review-card p { margin-top: 20px; }
+
+    .contact { text-align: center; margin-bottom: 50px; }
+    .contact h2 { margin-bottom: 10px; }
+    .contact-box {
+      width: 80%; margin: 0 auto; background: #f9f9f9;
+      border-radius: 10px; padding: 20px; border: 2px solid #444;
+    }
+    form { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+    input, textarea {
+      padding: 10px; border: 1px solid #aaa; border-radius: 5px; width: 100%;
+    }
+    button {
+      padding: 10px; background-color: #007bff; color: white;
+      border: none; border-radius: 5px; cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .container { flex-direction: column; align-items: center; }
+      .sidebar-box { width: 80%; }
+      .hero { flex-direction: column; text-align: center; }
+      .hero-text { margin-left: 0; margin-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar-box"><img src="../images/coder.png" alt=""></div>
+
+    <div class="main">
+      <header>
+        <!-- <div class="logo"><img src ="../images/coder.png"alt=""></div> -->
+        <nav>
+          <a href="#about">About</a>
+          <a href="#works">Works</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="home">
+        <img src="../images/me.png" alt="My Picture" />
+        <div class="hero-text">
+          <h1>I am Akpanumoh Abasiakara</h1>
+          <p>A Frontend Developer proficient in HTML, CSS, and JavaScript.I am a PHD holder in 5 different field including Web development.</p>
+          <button onclick="document.getElementById('works').scrollIntoView({behavior:'smooth'})">View Works</button>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <h2>About Me</h2>
+        <div class="content-box">
+          <p>I am a passionate web developer dedicated to building user-friendly and visually appealing websites. I focus on clean code and responsive design to ensure quality experiences across all devices.I am very experienced with 200+ program being done worldwide.</p>
+        </div>
+      </section>
+
+      <section class="works" id="works">
+        <h2>Works</h2>
+        <div class="work-cards">
+          <div class="work-card">
+            <img src="../images/landing.png" alt="landing Page" />
+            <p>Responsive Landing Page<br>#HTML #CSS</p>
+          </div>
+          <div class="work-card">
+            <img src="../images/calc.png" alt="Calculator" />
+            <p>Interactive Calculator<br>#HTML #CSS #JS</p>
+          </div>
+          <div class="work-card">
+            <img src="../images/portfolio.png" alt="portfolio" />
+            <p>Portfolio Website<br>#HTML #Tailwind</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews" id="reviews">
+        <h2>Reviews</h2>
+        <div class="review-cards">
+          <div class="review-card">
+            <img src="../images/elon.png" alt="Elon Musk" />
+            <p>"This guy is the best in the world and has been my client for a long time now."</p>
+            <small>~Elon Musk~</small>
+          </div>
+          <div class="review-card">
+            <img src="../images/bill.png" alt="Bill Gate" />
+            <p>"A creative and hardworking professional. He is regarded as my future successor."</p>
+            <small>~Bill Gate~</small>
+          </div>
+          <div class="review-card">
+            <img src="../images/ophrah.png" alt="oprah winfrey" />
+            <p>"Always delivers on time with outstanding quality."</p>
+            <small>~Oprah winfrey~</small>
+          </div>
+          <div class="review-card">
+            <img src="../images/teach.png" alt="teach" />
+            <p>"Smart, skilled, and easy to work with.By far the best student in my class better than Desire by far"</p>
+            <small>~Teacher and PHD holder~</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-box">
+          <p>Get in touch for collaboration or project inquiries.</p>
+          <form>
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button>Send</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
+
